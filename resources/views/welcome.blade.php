@@ -28,7 +28,7 @@
 
     <nav class="nav">
 
-        <button id="ujhirdetes"> Új hirdetés </button>
+        <button> <a href="/uj_hirdetes"> Új hirdetés </a></button>
         <button id="ajanlatok"> Ajánlatok </button>
     </nav>
 
@@ -37,7 +37,7 @@
         </article>
 
         <div id="ujhirdetes">
-            
+
         </div>
     </body>
 </html>
