@@ -1,6 +1,6 @@
 @include('includes.head')
 <head>
-<title>Kezdőlap</title>
+<title>Ajánlatok</title>
 </head>
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -25,16 +25,13 @@
         </style>
     </head>
     <body class="antialiased">
-    <header>
-<nav class="nav">
 
-<button> <a href="/uj_hirdetes"> Új hirdetés </a></button>
-<button id="ajanlatok"> Ajánlatok </button>
-</nav>
-<header>
+    <nav class="nav">
+        <a href="/ujhirdetes">Új hirdetés</a>
+        <a href="/ajanlatok">Ajánlatok</a>
+    </nav>
 
-
-    <article id="ingatlanokHelye" >
+        <article id="ingatlanokHelye" >
 
         </article>
 
