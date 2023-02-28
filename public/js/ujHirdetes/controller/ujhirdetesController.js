@@ -1,7 +1,7 @@
 import Aszinkron from "../../aszinkron.js";
 import OsszesekView from "../view/osszesView.js";
 
-class OsszesController{
+class UjhirdetesController{
     constructor(){
 
       
@@ -25,4 +25,4 @@ class OsszesController{
 }
 }
 
-export default OsszesController;
+export default UjhirdetesController;

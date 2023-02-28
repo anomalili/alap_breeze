@@ -27,11 +27,6 @@ return new class extends Migration
         Kategoriak::create(['id'=> 6,'szoveg'=>'Ipari ingatlan']);
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('kategoriaks');
