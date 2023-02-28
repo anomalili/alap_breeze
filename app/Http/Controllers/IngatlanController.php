@@ -25,6 +25,25 @@ class IngatlanController extends Controller
         $store->kepUrl = $request->kepUrl;
 
     }
+    public function formView(Request $request)
+    {
+        return view('welcome');
+    }
+
+    public function form(Request $request) {
+        $this->validate($request, [
+            'kategoria' => 'required',
+            'hirdetesDatuma' => 'required',
+            'leiras' => 'required',
+            'tehermentes' => 'required',
+            'kepUrl' => 'required'
+         ]);
+
+        Ingatlanok::create($request->all());
+        return back()->with('success', 'Sikeresen tárolva.');
+    }
+
+    
     public function destroy($id)
     {
         Ingatlanok::find($id)->delete();

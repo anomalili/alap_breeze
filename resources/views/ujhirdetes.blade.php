@@ -5,14 +5,25 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 </head>
-<article>
-<form  method="post" action="{{ url('/uj') }}" novalidate>
+<body>
+    <main>
+    <header>
+<nav class="nav">
+
+<button><a href="/"> Vissza </a></button>
+</nav>
+<header>
+    <article class="formos">
+
+    <h1>Új hirdetés elküldése</h1>
+<form  method="post" action="{{ route('validate.form') }}" novalidate>
             @csrf
 
 
 
             <div class="form-group">
                 <label>Ingatlan kategóriája:</label>
+                <br>
 <!--                 <br>
                 <input type="number"class="form-control @error('kategoria') is-invalid @enderror" name="kategoria" id="kategoria">
                 @error('kategoria')
@@ -30,6 +41,11 @@
                 <OPTION VALUE="6">Ipari ingatlan</option>
 
             </select>
+            @error('kategoria')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
             </div>
 
 
@@ -58,7 +74,7 @@
                 <label>Tehermentes</label>
                 <br>
                 <label>
-                <input type="checkbox" class="form-control @error('tehermentes') is-invalid @enderror" name="tehermentes" id="tehermentes" value="2">
+                <input type="checkbox" name="tehermentes" id="tehermentes" value="2">
                 @error('tehermentes')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -79,10 +95,11 @@
             </div>
 
 
-              <input type="submit" name="send" value="Submit" class="btn btn-dark btn-block">
+              <input type="submit" name="send" value="Küldés" class="btn btn-dark btn-block">
             </div>
 
             </form>
+
 </article>
 </main>
 </body>

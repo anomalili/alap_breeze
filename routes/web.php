@@ -19,12 +19,17 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/mindegyik',[IngatlanController::class, 'index']);
-Route::get('/uj',[IngatlanController::class, 'store']);
+
+Route::post('/uj',[IngatlanController::class, 'formView']);
+Route::post('/uj',[IngatlanController::class, 'form'])->name('validate.form');
+
+Route::post('/uj_ingatlan',[IngatlanController::class, 'store']);
 Route::get('/torles',[IngatlanController::class, 'destroy']);
 Route::get('/ingatlanKat',[IngatlanController::class, 'ingatlanKat']);
 
 Route::get('/kat_mutat',[KategoriaController::class, 'index']);
-Route::get('/kat_uj',[KategoriaController::class, 'store']);
+Route::post('/kat_uj',[KategoriaController::class, 'store']);
+Route::get('/kat_uj',[KategoriaController::class, 'storeView']);
 Route::get('/kat_torles',[KategoriaController::class, 'destroy']);
 
 require __DIR__.'/auth.php';

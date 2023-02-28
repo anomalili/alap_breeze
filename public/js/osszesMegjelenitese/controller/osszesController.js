@@ -20,7 +20,7 @@ class OsszesController{
     }
     megjelenit(adat) {
         console.log(adat);
-
+        $("#ingatlanokHelye").html("");
         new OsszesekView(adat, $("#ingatlanokHelye") );
 }
 }

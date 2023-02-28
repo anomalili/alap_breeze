@@ -25,19 +25,18 @@
         </style>
     </head>
     <body class="antialiased">
+    <header>
+<nav class="nav">
 
-    <nav class="nav">
+<button> <a href="/uj_hirdetes"> Új hirdetés </a></button>
+<button id="ajanlatok"> Ajánlatok </button>
+</nav>
+<header>
 
-        <button> <a href="/uj_hirdetes"> Új hirdetés </a></button>
-        <button id="ajanlatok"> Ajánlatok </button>
-    </nav>
 
     <article id="ingatlanokHelye" >
 
         </article>
 
-        <div id="ujhirdetes">
-
-        </div>
     </body>
 </html>
