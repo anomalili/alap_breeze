@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\inkagtalnokController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,5 +21,19 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+
+Route::get('/all',[inkagtalnokController::class, 'all']);
+Route::get('/ujHirdetes', function() {
+    return view('ujHirdetes');
+});
+Route::get('/welcome', function() {
+    return view('welcome');
+});
+Route::get('/store', function() {
+    return view('welcome');
+});
+Route::post('/store', [inkagtalnokController::class, 'store']);
+
 
 require __DIR__.'/auth.php';
